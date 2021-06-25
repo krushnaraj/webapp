@@ -27,7 +27,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1','colorswatch.com']
 
-STATICFILES_DIRS = ["/Users/krushnarajkamtekar/webapp/colorswatch/static",]
+STATICFILES_DIRS = [BASE_DIR / 'colorswatch/static',]
 
 
 # Application definition
