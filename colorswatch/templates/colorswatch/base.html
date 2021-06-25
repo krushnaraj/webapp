@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<!-- Link the css in static folder -->
+	<link rel="stylesheet" type="text/css" href ="{% static 'css/main.css' %}">
+	<link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity = "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin = "anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300&display=swap" rel="stylesheet">
+
+	<style>
+      .shadow {
+        -webkit-filter: drop-shadow( 4px 4px 3px rgba(0, 0, 0, 0.8));
+        filter: drop-shadow( 4px 4px 3px rgba(0, 0, 0, 0.8));
+      }
+
+      @media screen and (max-width: 400px) {
+ 		 .shadow {
+ 		 	width: 100%;
+    		height: auto;
+    		position: relative;
+    	}
+    }
+    </style>
+</head>
+<body>
+	<div class = "content">
+		<nav class="navbar">
+			<div class="brand-title">
+				<a href="{% url 'colorswatch-listview'  %}"><img src="/static/images/logo.png" class="logo" /></a>
+				 <!-- Form input using Post -->
+					<form action = "{% url 'colorswatch-detailview-search'  %}" method=POST>
+						{% csrf_token %}
+						<input type="text" placeholder="Search.." name="search_color" >
+					</form>
+			</div>
+		</nav>
+		<!-- Side bar with random color selection and color selection from options mentioned in the menu bar -->
+		<div class="sidebar" > 
+			<a class="button" href="{% url 'colorswatch-detailview-random'   %}">Random Color</a>
+			<a href="{% url 'colorswatch-detailview-color'  name='red' %}">Red</a>
+			<a href="{% url 'colorswatch-detailview-color' name='orange'  %}">Orange</a>
+			<a href="{% url 'colorswatch-detailview-color' name='yellow'  %}">Yellow</a>
+			<a href="{% url 'colorswatch-detailview-color' name='green'  %}">Green</a>
+			<a href="{% url 'colorswatch-detailview-color' name='blue'  %}">Blue</a>
+			<a href="{% url 'colorswatch-detailview-color' name='purple'  %}">Purple</a>
+			<a href="{% url 'colorswatch-detailview-color' name='brown'  %}">Brown</a>
+			<a href="{% url 'colorswatch-detailview-color' name='grey'  %}">Gray</a>
+		</div>
+		 <!-- Base template which will be inherit by child templates -->
+		<div >
+		      {% block content %}{% endblock %}
+		</div>
+	</div>
+</body>
+</html>
