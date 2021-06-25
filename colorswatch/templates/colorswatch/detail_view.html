@@ -1,0 +1,71 @@
+<!-- Inherit the base html -->
+{% extends "colorswatch/base.html" %}
+{% block content %}
+
+
+<!-- Retrieve the  context object returned by the end point  -->
+<div style ="width:1000px; height:100%;"  class = "tbl" >
+	<svg style="width:1000px;height:400px;" class="shadow">
+					
+		<path d="M40, 10 h920 a20,20 0 0 1 20, 20 v320  -20,20 h-920   -20,-20 v-320 a20,20 0 0 1 20,-20 z" fill="{{ colors.color0 }}"  stroke-width="3" />
+		<g>
+			<path d="M20, 350 h920  20,20 v20 a20,20 0 0 1 -20,20 h-920 a20,20 0 0 1 -20,-20 v-20  20,-20 z" fill="#f2f5f3" />
+			<text x="500" y="370" font-family="Verdana" font-size="14"  style="color:black;font-family: 'Source Serif Pro', serif;"> {{colors.color0}} 
+			</text>
+		</g>		
+	</svg>
+	<ul>
+	<li>
+		<svg style="width:180px;height:160px;" class="shadow">		
+			<path d="M20, 10 h140 a20,20 0 0 1 20, 20 v100  -20,20 h-140   -20,-20 v-100 a20,20 0 0 1 20,-20 z" fill="{{ colors.color1 }}"  stroke-width="3" />
+			<g>
+				<path d="M0,120 h140  20,20 v10 a20,20 0 0 1 -20,20 h-140 a20,20 0 0 1 -20,-20 v-10  20,-20 z" fill="#f2f5f3"  />
+				<text x="70" y="140" font-family="Verdana" font-size="12"  style="color:black;font-family: 'Source Serif Pro', serif;"> {{ colors.color1 }} 
+				</text> 
+			</g>			
+		</svg>
+	</li>
+	<li >
+		<svg style="width:180px;height:160px;" class="shadow">			
+			<path d="M20, 10 h140 a20,20 0 0 1 20, 20 v100  -20,20 h-140   -20,-20 v-100 a20,20 0 0 1 20,-20 z" fill="{{ colors.color2 }}"  stroke-width="3" />
+			<g>
+				<path d="M0,120 h140  20,20 v10 a20,20 0 0 1 -20,20 h-140 a20,20 0 0 1 -20,-20 v-10  20,-20 z" fill="#f2f5f3"  />
+				<text x="70" y="140" font-family="Verdana" font-size="12"  style="color:black;font-family: 'Source Serif Pro', serif;"> {{ colors.color2 }} 
+				</text>
+			</g>		
+		</svg>
+	</li>
+	<li>
+		<svg style="width:180px;height:160px;" class="shadow">
+			<path d="M20, 10 h140 a20,20 0 0 1 20, 20 v100  -20,20 h-140   -20,-20 v-100 a20,20 0 0 1 20,-20 z" fill="{{ colors.color3 }}"  stroke-width="3" />
+			<g>
+				<path d="M0,120 h140  20,20 v10 a20,20 0 0 1 -20,20 h-140 a20,20 0 0 1 -20,-20 v-10  20,-20 z" fill="#f2f5f3"  />
+				<text x="70" y="140" font-family="Verdana" font-size="12"  style="color:black;font-family: 'Source Serif Pro', serif;"> {{ colors.color3 }} 
+				</text>
+			</g>		
+		</svg>
+	</li>
+	<li>
+		<svg style="width:180px;height:160px;" class="shadow">
+			<path d="M20, 10 h140 a20,20 0 0 1 20, 20 v100  -20,20 h-140   -20,-20 v-100 a20,20 0 0 1 20,-20 z" fill="{{ colors.color4 }}"  stroke-width="3" />
+			<g>
+				<path d="M0,120 h140  20,20 v10 a20,20 0 0 1 -20,20 h-140 a20,20 0 0 1 -20,-20 v-10  20,-20 z" fill="#f2f5f3"  />
+				<text x="70" y="140" font-family="Verdana" font-size="12"  style="color:black;font-family: 'Source Serif Pro', serif;"> {{ colors.color4 }} 
+				</text>
+			</g>	
+		</svg>
+	</li>
+	<li >
+		<svg style="width:180px;height:160px;" class="shadow">
+			<path d="M20, 10 h140 a20,20 0 0 1 20, 20 v100  -20,20 h-140   -20,-20 v-100 a20,20 0 0 1 20,-20 z" fill="{{ colors.color5 }}"  stroke-width="3" />
+			<g>
+				<path d="M0,120 h140  20,20 v10 a20,20 0 0 1 -20,20 h-140 a20,20 0 0 1 -20,-20 v-10  20,-20 z" fill="#f2f5f3"  />
+				<text x="70" y="140" font-family="Verdana" font-size="12"  style="color:black;font-family: 'Source Serif Pro', serif;"> {{ colors.color5 }} 
+				</text>
+			</g>		
+		</svg>
+	</li>			
+	</ul>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,221 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro);
+
+body{
+ font-family: 'Source Serif Pro',serif;
+
+}
+
+.logo{
+    width:42px;
+    height:42px;
+}
+
+input {
+    border-radius: 7px;
+    padding: 10px 10px; line-height: 12px;
+    left: 1200px;
+    top: 10px;
+    position: absolute; 
+}
+
+ul{
+    display:inline; width: 100%;
+}
+
+li{
+    display:inline;
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background-color: rgba(54,60,60,255);
+    color: white;
+    height: 75px;
+    font-family: 'Source Serif Pro', serif;
+    overflow-x:auto;
+
+
+}
+
+
+.sidebar { 
+	margin: 0;
+	padding: 0;
+	width: 15%;
+	background-color:#d6d8d8;
+	position: fixed;
+	height: 100%;
+	overflow: auto;
+    float: left;
+    font-family: 'Source Serif Pro', serif;
+    overflow-x:auto;
+    
+    font-size: 15px;
+    /*position: -webkit-sticky;
+    position: sticky;*/
+}
+
+.sidebar a {
+	display: block;
+	color: black;
+    font-family: 'Source Serif Pro', serif;
+	padding: 16px;
+	text-decoration: none;
+ /* float: left;*/
+}
+
+.button {
+  background-color: #f2f2f2;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 50px 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-family: 'Source Serif Pro', serif;
+  font-weight: bold;
+  font-size: 15px;
+  border: 1px solid;
+}
+
+
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: red;
+}
+
+.tbl {
+    width: 85%;
+    margin-left: 240px;
+    overflow-x:auto;
+
+
+    
+}
+
+div.content {
+
+  height: 100%;
+}
+
+
+.active {
+    color:black;
+    font-family: 'Source Serif Pro', serif; 
+    font-weight:bold;
+}
+
+@media screen and (max-width: 800px){
+    .navbar.responsive  {
+        float: none;
+        display: block;
+
+        a{
+            float: none;
+        }
+
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .sidebar a {float: left;}
+    .button {
+        text-align: center;
+        float: none;
+    }
+
+    .tbl {
+        width: 85%;
+        float: none;
+        overflow-x:auto;
+
+    }
+    div.content {margin-left: 0;}
+    input {
+    border-radius: 7px;
+    padding: 10px 10px; line-height: 12px;
+    left: 600px;
+    top: 10px;
+    position: absolute; 
+}
+
+
+
+}
+
+
+@media screen and (max-width: 400px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+  .sidebar a {
+    text-align: center;
+    float: none;
+}
+
+.button {
+    text-align: center;
+    float: none;
+    font-size: 8px;
+}
+.tbl {
+    
+    float: none;
+    font-size: 8px;
+
+    margin-left: 0;
+    
+
+}
+.pagination {
+    width: 100%;
+    margin-left: 0;
+    text-indent: 1.2em;
+    }
+input {
+    border-radius: 7px;
+    padding: 10px 10px; 
+    line-height: 12px;
+    left: 100px;
+    top: 10px;
+    position: absolute; 
+    }
+
+}
+
+
+a{
+    float: none;
+}
+
+div.content {margin-left: 0; float: none}
+}
+
+.trcss{
+    text-align: center;
+
+}
+
+.pages {
+    width: 80%;
+    margin-left: 210px;
+}
+
+.pagination {
+    width: 85%;
+    margin-left: 210px;
+    text-indent: 1.2em;
+}
+

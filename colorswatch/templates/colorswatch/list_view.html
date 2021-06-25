@@ -1,0 +1,76 @@
+<!-- Inherit the base html -->
+{% extends "colorswatch/base.html" %}
+{% block content %}
+<div class = "tbl" >
+	<table >	
+		<tbody>
+			<!-- Loop through the context returned by the end point -->
+			{% for color in colors %}
+			<tr>
+				<td>
+					<svg style="width:250px;height:140px;" class="shadow">
+						<a href="{% url 'colorswatch-detailview' color.name1 %}" >
+						<path d="M20, 10 h200 a20,20 0 0 1 20, 20 v90  -20,20 h-200   -20,-20 v-90 a20,20 0 0 1 20,-20 z" fill="{{ color.color1 }}"  stroke-width="3" />
+						<g>
+							  <path d="M0,100 h200  20,20 v20 a20,20 0 0 1 -20,20 h-200 a20,20 0 0 1 -20,-20 v-20  20,-20 z" fill="#f2f5f3"  />
+								<text x="100" y="125" font-family="Verdana" font-size="12"  style="color:black;font-family: 'Source Serif Pro', serif;"> {{ color.color1 }} </text> 
+						</g>	
+						</a>
+					</svg>
+				</td>
+				<td>
+					<svg style="width:250px;height:140px;" class="shadow">
+						<a href="{% url 'colorswatch-detailview'  color.name2%}">
+						<path d="M20, 10 h200 a20,20 0 0 1 20, 20 v90  -20,20 h-200   -20,-20 v-90 a20,20 0 0 1 20,-20 z" fill="{{ color.color2 }}"  stroke-width="3" />
+						<g>
+							<path d="M0,100 h200  20,20 v20 a20,20 0 0 1 -20,20 h-200 a20,20 0 0 1 -20,-20 v-20  20,-20 z" fill="#f2f5f3"  />
+							<text x="100" y="125" font-family="Verdana" font-size="12"  style="color:black;font-family: 'Source Serif Pro', serif;"> {{ color.color2 }} </text>
+						</g>
+						</a>
+					</svg>
+				</td>
+				<td>
+					<svg style="width:250px;height:140px;" class="shadow">
+						<a href="{% url 'colorswatch-detailview'  color.name3 %}">
+						<path d="M20, 10 h200 a20,20 0 0 1 20, 20 v90  -20,20 h-200   -20,-20 v-90 a20,20 0 0 1 20,-20 z" fill="{{ color.color3 }}"  stroke-width="3" />
+						<g>
+							<path d="M0,100 h200  20,20 v20 a20,20 0 0 1 -20,20 h-200 a20,20 0 0 1 -20,-20 v-20  20,-20 z" fill="#f2f5f3"  />
+							<text x="100" y="125" font-family="Verdana" font-size="12"  style="color:black;font-family: 'Source Serif Pro', serif;"> {{ color.color3 }} </text>
+						</g>
+						</a>
+					</svg>
+				</td>
+				<td>
+					<svg style="width:250px;height:140px;" class="shadow">
+						<a href="{% url 'colorswatch-detailview'  color.name4%}">
+							<path d="M20, 10 h200 a20,20 0 0 1 20, 20 v90  -20,20 h-200   -20,-20 v-90 a20,20 0 0 1 20,-20 z" fill="{{ color.color4 }}"  stroke-width="3" />
+						<g>
+						<path d="M0,100 h200  20,20 v20 a20,20 0 0 1 -20,20 h-200 a20,20 0 0 1 -20,-20 v-20  20,-20 z" fill="#f2f5f3"  />
+
+							<text x="100" y="125" font-family="Verdana" font-size="12"  style="color:black;font-family: 'Source Serif Pro', serif;"> {{ color.color4 }} </text>
+						</g>
+						</a>
+					</svg>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+		
+	</table>
+</div>
+
+<!-- Organize and paginate the data returned by end point -->
+<div class="pages">
+	{% if colors.has_other_pages %}
+	<ul class="pagination" >
+      {% for i in colors.paginator.page_range %}
+      {% if colors.number == i %}
+      <li class="active"><u><span>{{ i }} <span class="sr-only">(current)</span></span></u></li>
+      {% else %}
+      <li><a href="?page={{ i }}" style="color:black;font-family: 'Source Serif Pro', serif;">{{ i }}</a></li>
+      {% endif %}
+      {% endfor %}
+  </ul>
+  {% endif %}
+</div>
+{% endblock content %}
