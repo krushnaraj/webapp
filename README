@@ -1,1 +1,3 @@
-Webapp
+Webapp showing color swatches
+Backend built using django/python
+Front built using html,css,django jinja
